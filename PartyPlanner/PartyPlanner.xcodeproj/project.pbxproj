@@ -16,6 +16,10 @@
 		19EA1C9B1F6D7A9300BF67EA /* PartyPlannerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA1C9A1F6D7A9300BF67EA /* PartyPlannerUITests.swift */; };
 		19EA1CAB1F6D871100BF67EA /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA1CAA1F6D871100BF67EA /* RegisterPageViewController.swift */; };
 		19EA1CAF1F6DA33700BF67EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 19EA1CAE1F6DA33700BF67EA /* GoogleService-Info.plist */; };
+		D62414F01F6DB04400CD20AD /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = D62414EF1F6DB04400CD20AD /* View.xib */; };
+		D62414F41F6DB9AA00CD20AD /* PartyCreatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62414F31F6DB9AA00CD20AD /* PartyCreatorViewController.swift */; };
+		D62414F61F6DBE8900CD20AD /* PartyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62414F51F6DBE8900CD20AD /* PartyCell.swift */; };
+		D62414F81F6DC2A400CD20AD /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D62414F71F6DC2A400CD20AD /* Party.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +55,10 @@
 		19EA1C9C1F6D7A9300BF67EA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19EA1CAA1F6D871100BF67EA /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
 		19EA1CAE1F6DA33700BF67EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D62414EF1F6DB04400CD20AD /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		D62414F31F6DB9AA00CD20AD /* PartyCreatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PartyCreatorViewController.swift; path = ../PartyCreatorViewController.swift; sourceTree = "<group>"; };
+		D62414F51F6DBE8900CD20AD /* PartyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyCell.swift; sourceTree = "<group>"; };
+		D62414F71F6DC2A400CD20AD /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		19EA1C791F6D7A9200BF67EA /* PartyPlanner */ = {
 			isa = PBXGroup;
 			children = (
+				D62414F31F6DB9AA00CD20AD /* PartyCreatorViewController.swift */,
 				19EA1C7A1F6D7A9200BF67EA /* AppDelegate.swift */,
 				19EA1C7C1F6D7A9200BF67EA /* ViewController.swift */,
 				19EA1C7E1F6D7A9200BF67EA /* Main.storyboard */,
@@ -109,6 +118,9 @@
 				19EA1C861F6D7A9200BF67EA /* Info.plist */,
 				19EA1CAA1F6D871100BF67EA /* RegisterPageViewController.swift */,
 				19EA1CAE1F6DA33700BF67EA /* GoogleService-Info.plist */,
+				D62414EF1F6DB04400CD20AD /* View.xib */,
+				D62414F51F6DBE8900CD20AD /* PartyCell.swift */,
+				D62414F71F6DC2A400CD20AD /* Party.swift */,
 			);
 			path = PartyPlanner;
 			sourceTree = "<group>";
@@ -239,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				19EA1C851F6D7A9200BF67EA /* LaunchScreen.storyboard in Resources */,
+				D62414F01F6DB04400CD20AD /* View.xib in Resources */,
 				19EA1CAF1F6DA33700BF67EA /* GoogleService-Info.plist in Resources */,
 				19EA1C821F6D7A9200BF67EA /* Assets.xcassets in Resources */,
 				19EA1C801F6D7A9200BF67EA /* Main.storyboard in Resources */,
@@ -266,8 +279,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D62414F41F6DB9AA00CD20AD /* PartyCreatorViewController.swift in Sources */,
+				D62414F61F6DBE8900CD20AD /* PartyCell.swift in Sources */,
 				19EA1C7D1F6D7A9200BF67EA /* ViewController.swift in Sources */,
 				19EA1C7B1F6D7A9200BF67EA /* AppDelegate.swift in Sources */,
+				D62414F81F6DC2A400CD20AD /* Party.swift in Sources */,
 				19EA1CAB1F6D871100BF67EA /* RegisterPageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +529,7 @@
 				19EA1CA11F6D7A9300BF67EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19EA1CA21F6D7A9300BF67EA /* Build configuration list for PBXNativeTarget "PartyPlannerTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +538,7 @@
 				19EA1CA41F6D7A9300BF67EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		19EA1CA51F6D7A9300BF67EA /* Build configuration list for PBXNativeTarget "PartyPlannerUITests" */ = {
 			isa = XCConfigurationList;
@@ -529,6 +547,7 @@
 				19EA1CA71F6D7A9300BF67EA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

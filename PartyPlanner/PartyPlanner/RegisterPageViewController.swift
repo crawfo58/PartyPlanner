@@ -47,8 +47,6 @@ class RegisterPageViewController: UIViewController {
             return;
         }
         
-        // Strore Data
-        
         
         
         

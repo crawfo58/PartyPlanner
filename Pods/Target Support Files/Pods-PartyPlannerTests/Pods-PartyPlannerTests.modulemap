@@ -1,0 +1,6 @@
+framework module Pods_PartyPlannerTests {
+  umbrella header "Pods-PartyPlannerTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

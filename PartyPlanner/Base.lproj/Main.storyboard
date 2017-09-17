@@ -240,7 +240,6 @@
                                 <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="newEventNext:" destination="6ii-7g-Ye9" eventType="touchUpInside" id="Ji0-xg-AyK"/>
-                                    <segue destination="7Jw-Kc-78N" kind="presentation" identifier="itemsNeeded" id="c99-of-26j"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLA-cI-Mot">
@@ -257,6 +256,7 @@
                         <outlet property="eventDate" destination="66z-ur-b8k" id="h3T-vM-9K1"/>
                         <outlet property="eventLoc" destination="zLA-cI-Mot" id="vCR-wu-joF"/>
                         <outlet property="eventName" destination="hyS-Oi-otS" id="OQc-Kg-tdI"/>
+                        <segue destination="7Jw-Kc-78N" kind="show" identifier="itemsNeeded" id="TzA-CM-dxX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qlj-JB-EZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,7 +302,7 @@
                                 <rect key="frame" x="90" y="268" width="209" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Return to Party List"/>
+                                <state key="normal" title="Next"/>
                                 <connections>
                                     <action selector="toInvitation:" destination="7Jw-Kc-78N" eventType="touchUpInside" id="NfP-ns-YzJ"/>
                                 </connections>
@@ -312,11 +312,12 @@
                     </view>
                     <connections>
                         <outlet property="newItem" destination="g54-Vf-bpK" id="x0q-Sv-Iob"/>
+                        <segue destination="LcO-GY-czc" kind="presentation" identifier="inviteGuests" id="3ZH-bF-H5W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qUC-b8-Jwe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2056.8000000000002" y="926.98650674662679"/>
+            <point key="canvasLocation" x="2314" y="927"/>
         </scene>
         <!--Party Creator View Controller-->
         <scene sceneID="cvL-4G-Uyo">
@@ -343,7 +344,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pvt-Ih-5I4">
-                                                    <rect key="frame" x="8" y="11" width="359" height="21"/>
+                                                    <rect key="frame" x="8" y="11" width="209" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -357,7 +358,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Bh-HP-uVc">
-                                                    <rect key="frame" x="17" y="67" width="339" height="21"/>
+                                                    <rect key="frame" x="17" y="67" width="248" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -369,6 +370,7 @@
                                             <outlet property="dateLabel" destination="rDY-LZ-agj" id="nqr-d7-f05"/>
                                             <outlet property="locationLabel" destination="9Bh-HP-uVc" id="NK7-ul-D0h"/>
                                             <outlet property="nameLabel" destination="Pvt-Ih-5I4" id="ujD-wN-N5l"/>
+                                            <segue destination="YgD-Ka-AyA" kind="show" identifier="finalSegue" id="jlk-5K-nlC"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -393,10 +395,10 @@
             </objects>
             <point key="canvasLocation" x="1402.4000000000001" y="138.98050974512745"/>
         </scene>
-        <!--View Controller-->
+        <!--Invite Guests View Controller-->
         <scene sceneID="DeQ-Fi-2xC">
             <objects>
-                <viewController id="LcO-GY-czc" sceneMemberID="viewController">
+                <viewController id="LcO-GY-czc" customClass="inviteGuestsViewController" customModule="PartyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QEn-mj-BeC"/>
                         <viewControllerLayoutGuide type="bottom" id="wd6-ey-wlA"/>
@@ -424,25 +426,36 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Invite Another Guest"/>
+                                <connections>
+                                    <action selector="Invite:" destination="LcO-GY-czc" eventType="touchUpInside" id="dUo-fF-piq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E8q-e8-YVU">
                                 <rect key="frame" x="72" y="306" width="211" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Return to Party List"/>
+                                <state key="normal" title="Start Party Planning!"/>
+                                <connections>
+                                    <action selector="finalButton:" destination="LcO-GY-czc" eventType="touchUpInside" id="r40-ju-SpO"/>
+                                    <segue destination="IWo-HB-H6K" kind="presentation" identifier="finalEntry" id="tO7-SG-O8s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GbB-Tt-Y42"/>
+                    <connections>
+                        <outlet property="guestIDTextLabel" destination="ihd-li-0km" id="3kH-5i-7ZX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ywu-hQ-hXj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2088.8000000000002" y="141.67916041979012"/>
+            <point key="canvasLocation" x="2110" y="178"/>
         </scene>
-        <!--View Controller-->
+        <!--Final View View Controller-->
         <scene sceneID="LuF-al-uU4">
             <objects>
-                <viewController id="YgD-Ka-AyA" sceneMemberID="viewController">
+                <viewController id="YgD-Ka-AyA" customClass="FinalViewViewController" customModule="PartyPlanner" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gkX-Av-ya6"/>
                         <viewControllerLayoutGuide type="bottom" id="4Jd-RM-4x8"/>
@@ -452,20 +465,76 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kfs-EJ-5US">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="151" width="375" height="558"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PartyNameCell" rowHeight="39" id="EjZ-PQ-D5I" customClass="PartyNameCell" customModule="PartyPlanner" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="39"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EjZ-PQ-D5I" id="Pp0-qw-3sp">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="38.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mxa-Az-RQi">
+                                                    <rect key="frame" x="185" y="-11" width="42" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nVW-7F-ATD">
+                                                    <rect key="frame" x="91" y="0.0" width="195" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="item" destination="nVW-7F-ATD" id="toV-ac-LqU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QGo-uY-VVH">
+                                <rect key="frame" x="28" y="37" width="316" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mn2-QS-aPV">
+                                <rect key="frame" x="16" y="66" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4p6-Px-MOs">
+                                <rect key="frame" x="16" y="95" width="321" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="date" destination="Mn2-QS-aPV" id="BPZ-cm-eDf"/>
+                        <outlet property="location" destination="4p6-Px-MOs" id="dIF-JJ-8q3"/>
+                        <outlet property="name" destination="QGo-uY-VVH" id="iyv-Zh-jIq"/>
+                        <outlet property="tableView" destination="kfs-EJ-5US" id="Ut0-zi-3mp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V2S-p6-2NS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2796" y="136.28185907046478"/>
+            <point key="canvasLocation" x="2821.5999999999999" y="151.57421289355324"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Eq5-Ru-n6M"/>
+        <segue reference="tO7-SG-O8s"/>
     </inferredMetricsTieBreakers>
 </document>

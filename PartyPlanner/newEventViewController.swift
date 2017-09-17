@@ -33,7 +33,7 @@ class newEventViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let event = sender as! Party
         let destination = segue.destination as! ItemsNeededViewController
-        destination.party = event
+        destination.event = event
         
     }
 

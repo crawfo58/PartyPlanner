@@ -15,11 +15,20 @@ class ViewController: UIViewController {
     @IBAction func Login(_ sender: Any) {
             Auth.auth().signIn(withEmail: usernameTextField.text!, password: passwordTextField.text!) { (user, error) in
                 if let error = error {
+                    let myAlert = UIAlertController(title:"Alert", message:"Username does not exist!", preferredStyle: UIAlertControllerStyle.alert);
+                    
+                    let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.default, handler:nil);
+                    
+                    myAlert.addAction(okAction);
+                    
+                    self.present(myAlert, animated:true, completion:nil);
                     print(error.localizedDescription)
                     return
                 }
                 
-                self.performSegue(withIdentifier: "loginSegue", sender: nil)
+                else {
+
+                    self.performSegue(withIdentifier: "loginSegue", sender: nil)}
                 
         }
     }

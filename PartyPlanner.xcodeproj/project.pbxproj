@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		19C68C4C1F6DF24E00555867 /* newEventViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C68C4B1F6DF24E00555867 /* newEventViewController.swift */; };
 		19C68C4E1F6DFF7D00555867 /* ItemsNeededViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C68C4D1F6DFF7D00555867 /* ItemsNeededViewController.swift */; };
+		19C68C501F6E125D00555867 /* inviteGuestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C68C4F1F6E125D00555867 /* inviteGuestsViewController.swift */; };
+		19C68C521F6E19C000555867 /* FinalViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C68C511F6E19C000555867 /* FinalViewViewController.swift */; };
+		19C68C541F6E1C8F00555867 /* PatyNameCellTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C68C531F6E1C8F00555867 /* PatyNameCellTableCell.swift */; };
+		19C68C561F6E1D5300555867 /* PartyNameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C68C551F6E1D5300555867 /* PartyNameCell.swift */; };
+		19C68C581F6E209200555867 /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C68C571F6E209200555867 /* FoodListCell.swift */; };
 		19EA1C7B1F6D7A9200BF67EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA1C7A1F6D7A9200BF67EA /* AppDelegate.swift */; };
 		19EA1C7D1F6D7A9200BF67EA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19EA1C7C1F6D7A9200BF67EA /* ViewController.swift */; };
 		19EA1C801F6D7A9200BF67EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19EA1C7E1F6D7A9200BF67EA /* Main.storyboard */; };
@@ -46,6 +51,11 @@
 /* Begin PBXFileReference section */
 		19C68C4B1F6DF24E00555867 /* newEventViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = newEventViewController.swift; sourceTree = "<group>"; };
 		19C68C4D1F6DFF7D00555867 /* ItemsNeededViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsNeededViewController.swift; sourceTree = "<group>"; };
+		19C68C4F1F6E125D00555867 /* inviteGuestsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = inviteGuestsViewController.swift; sourceTree = "<group>"; };
+		19C68C511F6E19C000555867 /* FinalViewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FinalViewViewController.swift; sourceTree = "<group>"; };
+		19C68C531F6E1C8F00555867 /* PatyNameCellTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatyNameCellTableCell.swift; sourceTree = "<group>"; };
+		19C68C551F6E1D5300555867 /* PartyNameCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartyNameCell.swift; sourceTree = "<group>"; };
+		19C68C571F6E209200555867 /* FoodListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListCell.swift; sourceTree = "<group>"; };
 		19EA1C771F6D7A9200BF67EA /* PartyPlanner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyPlanner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19EA1C7A1F6D7A9200BF67EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19EA1C7C1F6D7A9200BF67EA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,8 +141,10 @@
 				19EA1C7A1F6D7A9200BF67EA /* AppDelegate.swift */,
 				19EA1C7C1F6D7A9200BF67EA /* ViewController.swift */,
 				19EA1C7E1F6D7A9200BF67EA /* Main.storyboard */,
+				19C68C571F6E209200555867 /* FoodListCell.swift */,
 				19EA1CB01F6DD3A700BF67EA /* Party.swift */,
 				19EA1CB11F6DD3A700BF67EA /* PartyCell.swift */,
+				19C68C551F6E1D5300555867 /* PartyNameCell.swift */,
 				19EA1CB21F6DD3A700BF67EA /* PartyCreatorViewController.swift */,
 				19EA1C811F6D7A9200BF67EA /* Assets.xcassets */,
 				19EA1C831F6D7A9200BF67EA /* LaunchScreen.storyboard */,
@@ -141,6 +153,9 @@
 				19EA1CAE1F6DA33700BF67EA /* GoogleService-Info.plist */,
 				19C68C4B1F6DF24E00555867 /* newEventViewController.swift */,
 				19C68C4D1F6DFF7D00555867 /* ItemsNeededViewController.swift */,
+				19C68C4F1F6E125D00555867 /* inviteGuestsViewController.swift */,
+				19C68C511F6E19C000555867 /* FinalViewViewController.swift */,
+				19C68C531F6E1C8F00555867 /* PatyNameCellTableCell.swift */,
 			);
 			path = PartyPlanner;
 			sourceTree = "<group>";
@@ -487,10 +502,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				19C68C4E1F6DFF7D00555867 /* ItemsNeededViewController.swift in Sources */,
+				19C68C581F6E209200555867 /* FoodListCell.swift in Sources */,
+				19C68C541F6E1C8F00555867 /* PatyNameCellTableCell.swift in Sources */,
 				19EA1CB51F6DD3A700BF67EA /* PartyCreatorViewController.swift in Sources */,
+				19C68C561F6E1D5300555867 /* PartyNameCell.swift in Sources */,
 				19EA1C7D1F6D7A9200BF67EA /* ViewController.swift in Sources */,
 				19EA1CB41F6DD3A700BF67EA /* PartyCell.swift in Sources */,
 				19C68C4C1F6DF24E00555867 /* newEventViewController.swift in Sources */,
+				19C68C501F6E125D00555867 /* inviteGuestsViewController.swift in Sources */,
+				19C68C521F6E19C000555867 /* FinalViewViewController.swift in Sources */,
 				19EA1C7B1F6D7A9200BF67EA /* AppDelegate.swift in Sources */,
 				19EA1CB31F6DD3A700BF67EA /* Party.swift in Sources */,
 				19EA1CAB1F6D871100BF67EA /* RegisterPageViewController.swift in Sources */,

@@ -34,11 +34,10 @@ class PartyCreatorViewController: UIViewController, UITableViewDelegate, UITable
         
         // TODO load data from internet
         Database.database().reference().child("users").child(Auth.auth().currentUser!.email!.replacingOccurrences(of: ".", with: ",")).child("events").observeSingleEvent(of: .value, with: { (snapshot) in
-            print(snapshot)
             let eventsKey = snapshot.value as! String
-            print(eventsKey)
-                    Database.database().reference().child("events").child(eventsKey).observeSingleEvent(of: .value, with: { (snapshot) in
-                        if let info = snapshot.value as? Dictionary<String, Any> {
+            print(snapshot)
+            Database.database().reference().child("events").child(eventsKey).observeSingleEvent(of: .value, with: {(snapshot) in
+            if let info = snapshot.value as? Dictionary<String, Any> {
                             let party = Party(name: info["name"] as! String, date: info["date"] as! String, location: info["location"] as! String, itemsNeeded: info["items"] as! [String], uid: eventsKey)
                                 
                             

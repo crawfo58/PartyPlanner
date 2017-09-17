@@ -27,7 +27,7 @@ class inviteGuestsViewController: UIViewController {
     @IBAction func Invite(_ sender: Any) {
         let email = guestIDTextLabel.text
         let newEmail = email?.replacingOccurrences(of: ".", with: ",")
-        Database.database().reference().child("users").child(newEmail!).child("events").child(self.event.uid).setValue(self.event.uid)
+        Database.database().reference().child("users").child(newEmail!).child("events").setValue(self.event.uid)
         
     }
     @IBAction func finalButton(_ sender: Any) {
